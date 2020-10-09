@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 
 public class GrpcConfigurationWithServicesTest extends GrpcConfigurationBaseTest {
 
-    private static final String SERVICE_DEFINITION_NAME = "TestService";
+    private static final String SERVICE_DEFINITION_NAME = "GrpcServiceExample";
 
     @Test
     public void shouldHaveAGrpcServerStarted() {
@@ -29,7 +29,7 @@ public class GrpcConfigurationWithServicesTest extends GrpcConfigurationBaseTest
     }
 
     @GrpcService
-    public static class TestGrpcService implements BindableService {
+    public static class GrpcServiceExample implements BindableService {
 
         @Override
         public ServerServiceDefinition bindService() {
